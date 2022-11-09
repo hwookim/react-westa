@@ -11,6 +11,11 @@ const Main = () => {
     const handleKeyDown = (event) => {
         if (event.key !== "Enter") return;
 
+        addTodo();
+    }
+
+    const addTodo = () => {
+        if (!todo) return;
         setTodos([...todos, todo]);
         setTodo("");
     }
@@ -24,6 +29,7 @@ const Main = () => {
     return (
         <div>
             <input value={todo} onChange={handleChange} onKeyUp={handleKeyDown} />
+            <button onClick={addTodo}>todo!</button>
             {todos.map((value, index) =>
                 <div key={index}>
                     {value}
