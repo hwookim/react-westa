@@ -4,141 +4,161 @@ import './Main.scss';
 const Main = () => {
   return (
     <>
-      <nav class="nav">
-        <div class="nav-left">
-          <img class="logo" src="/images/logo.png" alt="logo" />
-          <h1 class="title">Westagram</h1>
+      <nav className="nav">
+        <div className="nav-left">
+          <img className="logo" src="/images/logo.png" alt="logo" />
+          <h1 className="title">Westagram</h1>
         </div>
-        <label class="search-bar" for="search">
-          <span class="material-symbols-outlined search-icon"> search </span>
-          <input class="search-input" placeholder="검색" name="search" />
+        <label className="search-bar" for="search">
+          <span className="material-symbols-outlined search-icon">
+            {' '}
+            search{' '}
+          </span>
+          <input className="search-input" placeholder="검색" name="search" />
         </label>
-        <div class="nav-right">
-          <span class="material-symbols-outlined icon nav-icon"> explore </span>
-          <span class="material-symbols-outlined icon nav-icon">favorite</span>
-          <span class="material-symbols-outlined icon nav-icon"> person </span>
+        <div className="nav-right">
+          <span className="material-symbols-outlined icon nav-icon">
+            {' '}
+            explore{' '}
+          </span>
+          <span className="material-symbols-outlined icon nav-icon">
+            favorite
+          </span>
+          <span className="material-symbols-outlined icon nav-icon">
+            {' '}
+            person{' '}
+          </span>
         </div>
       </nav>
-      <main class="main">
-        <div class="feeds">
-          <article class="feed">
-            <div class="feed-top">
+      <main className="main">
+        <div className="feeds">
+          <article className="feed">
+            <div className="feed-top">
               <img
-                class="feed-profile"
+                className="feed-profile"
                 src="/images/profile.jpg"
                 alt="profile"
               />
-              <span class="bold">canon_mj</span>
-              <span class="material-symbols-outlined icon more-icon">
+              <span className="bold">canon_mj</span>
+              <span className="material-symbols-outlined icon more-icon">
                 more_horiz
               </span>
             </div>
             <img
-              class="feed-img"
+              className="feed-img"
               src="https://cdn.pixabay.com/photo/2022/03/08/21/20/running-7056590_1280.jpg"
               alt="feed"
             />
-            <div class="feed-contents">
-              <div class="feed-btns gray">
-                <div class="feed-btns-left">
-                  <span class="material-symbols-outlined icon"> favorite </span>
-                  <span class="material-symbols-outlined icon">
+            <div className="feed-contents">
+              <div className="feed-btns gray">
+                <div className="feed-btns-left">
+                  <span className="material-symbols-outlined icon">
+                    {' '}
+                    favorite{' '}
+                  </span>
+                  <span className="material-symbols-outlined icon">
                     mode_comment
                   </span>
-                  <span class="material-symbols-outlined icon">ios_share</span>
+                  <span className="material-symbols-outlined icon">
+                    ios_share
+                  </span>
                 </div>
-                <span class="material-symbols-outlined icon bookmark-icon">
+                <span className="material-symbols-outlined icon bookmark-icon">
                   bookmark
                 </span>
               </div>
-              <div class="likes">
+              <div className="likes">
                 <img
-                  class="likes-profile"
+                  className="likes-profile"
                   src="/images/profile.jpg"
                   alt="profile"
                 />
-                <span class="bold">alneworld</span>님&nbsp
-                <span class="bold"> 외 10명</span>이 좋아합니다
+                <span className="bold">alneworld</span>님&nbsp
+                <span className="bold"> 외 10명</span>이 좋아합니다
               </div>
-              <div class="contents">
-                <span class="nickname">canon_mj</span>
+              <div className="contents">
+                <span className="nickname">canon_mj</span>
                 위워크에서 진행한 베이킹 클래스
               </div>
-              <div class="comments">
-                <div class="comment">
-                  <span class="nickname">neceosecius</span>
+              <div className="comments">
+                <div className="comment">
+                  <span className="nickname">neceosecius</span>
                   거봐 좋았잖아~~~~
-                  <span class="material-symbols-outlined icon gray comment-heart">
+                  <span className="material-symbols-outlined icon gray comment-heart">
                     favorite
                   </span>
                 </div>
               </div>
-              <div class="bold gray">42분 전</div>
+              <div className="bold gray">42분 전</div>
             </div>
-            <label class="comment-input-wrapper">
-              <input class="comment-input" placeholder="댓글 달기..." />
-              <button class="comment-btn" disabled>
+            <label className="comment-input-wrapper">
+              <input className="comment-input" placeholder="댓글 달기..." />
+              <button className="comment-btn" disabled>
                 게시
               </button>
             </label>
           </article>
         </div>
-        <div class="main-right">
-          <div class="profile">
-            <img class="profile-img" src="/images/profile.jpg" alt="profile" />
-            <div class="profile-info">
-              <div class="profile-nickname">wecode_bootcamp</div>
-              <div class="profile-description">Wecode | 위코드</div>
+        <div className="main-right">
+          <div className="profile">
+            <img
+              className="profile-img"
+              src="/images/profile.jpg"
+              alt="profile"
+            />
+            <div className="profile-info">
+              <div className="profile-nickname">wecode_bootcamp</div>
+              <div className="profile-description">Wecode | 위코드</div>
             </div>
           </div>
-          <div class="main-right-box">
-            <div class="main-right-box-top">
-              <span class="bold gray">스토리</span>
-              <span class="bold">모두 보기</span>
+          <div className="main-right-box">
+            <div className="main-right-box-top">
+              <span className="bold gray">스토리</span>
+              <span className="bold">모두 보기</span>
             </div>
-            <div class="story-list">
-              <div class="story-list-item">
+            <div className="story-list">
+              <div className="story-list-item">
                 <img
-                  class="story-profile"
+                  className="story-profile"
                   src="/images/profile.jpg"
                   alt="profile"
                 />
                 <div>
-                  <div class="bold">we_sta_g_ram</div>
-                  <div class="bold gray">6분 전</div>
+                  <div className="bold">we_sta_g_ram</div>
+                  <div className="bold gray">6분 전</div>
                 </div>
               </div>
-              <div class="story-list-item">
+              <div className="story-list-item">
                 <img
-                  class="story-profile"
+                  className="story-profile"
                   src="/images/profile.jpg"
                   alt="profile"
                 />
                 <div>
-                  <div class="bold">a_e_i_o_u</div>
-                  <div class="bold gray">16분 전</div>
+                  <div className="bold">a_e_i_o_u</div>
+                  <div className="bold gray">16분 전</div>
                 </div>
               </div>
-              <div class="story-list-item">
+              <div className="story-list-item">
                 <img
-                  class="story-profile"
+                  className="story-profile"
                   src="/images/profile.jpg"
                   alt="profile"
                 />
                 <div>
-                  <div class="bold">wwwwww</div>
-                  <div class="bold gray">3시간 전</div>
+                  <div className="bold">wwwwww</div>
+                  <div className="bold gray">3시간 전</div>
                 </div>
               </div>
-              <div class="story-list-item">
+              <div className="story-list-item">
                 <img
-                  class="story-profile"
+                  className="story-profile"
                   src="/images/profile.jpg"
                   alt="profile"
                 />
                 <div>
-                  <div class="bold">we_code_boot_camp</div>
-                  <div class="bold gray">20시간 전</div>
+                  <div className="bold">we_code_boot_camp</div>
+                  <div className="bold gray">20시간 전</div>
                 </div>
               </div>
             </div>
