@@ -1,22 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import UserTodo from './components/UserTodo';
+import React from 'react';
 
 const Main = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    fetch('/data/todos.json')
-      .then(res => res.json())
-      .then(data => setUsers(data));
-  }, []);
-
-  return (
-    <div>
-      {users.map(user => (
-        <UserTodo key={user.id} user={user} />
-      ))}
-    </div>
-  );
+  return <div>Main</div>;
 };
 
 export default Main;
