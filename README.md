@@ -1,14 +1,17 @@
 ## 설명 흐름
 
 Todo 추가하기
+
 - value 값 state로 관리
 - keyDown 이벤트로 Todo 추가
 - map을 이용해서 반복 렌더링
 
 Todo 삭제하기
+
 - state 변경 시 무조건 새 객체(배열) 이용
 
 각 사용자 별 Todo 쓰기
+
 - 상수 데이터로 먼저 보여주기
 - mockData로 useEffect, fetch 보여주기
 - todos를 모두가 공유함 -> 컴포넌트 분리
