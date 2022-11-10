@@ -1,52 +1,21 @@
-## 설명 흐름
+### 학습 목표
 
-Todo 추가하기
+- React Intro
+  - Component 구조
+  - jsx에서 js 변수 이용하기
+  - 컴포넌트 내에 js 코드의 위치
+	- 이벤트에 함수 등록
 
-- value 값 state로 관리
-- keyDown 이벤트로 Todo 추가
-- map을 이용해서 반복 렌더링
+- Router Sass
+  - Router.js
+	  - Route 컴포넌트의 path, element
+  - Sass
+    - 왜 씀?
+    - nesting 하는 이유
 
-Todo 삭제하기
+- Props, State → 로그인 구현된 거 톺아보기
+  - 각각의 개념, 구분
+  - useState활용해 input의 값 컨트롤하기
 
-- state 변경 시 무조건 새 객체(배열) 이용
-
-각 사용자 별 Todo 쓰기
-
-- 상수 데이터로 먼저 보여주기
-- mockData로 useEffect, fetch 보여주기
-- todos를 모두가 공유함 -> 컴포넌트 분리
-
-## 설명해줘야 할 것들
-
-1. 리액트의 기본 구조
-
-```jsx
-const 컴포넌트 이름 = (props) => {
-    // state 및 함수 선언
-
-    return (
-        //태그
-    )
-}
-```
-
-- 한 파일에 하나의 컴포넌트
-- 분리는 나중에
-
-2. state 이용 방법
-
-- inputValue 관리, 이벤트 함수와 함께 설명
-
-3. 이벤트 함수 이용 방법
-
-```jsx
-const handleClick = () => {
-    //로직
-}
-
-<button onClick={handleClick}>
-```
-
-4. 컴포넌트 분리 방법
-
-- 누가 해야할 일인가?
+- 댓글 추가하기 구현
+	- 레이아웃까지 구현된 상태에서 댓글 추가기능만 구현
