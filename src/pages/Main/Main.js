@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 
 const Main = () => {
+  const [commentInput, setCommentInput] = useState('');
+  const [commentList, setCommentList] = useState([]);
+  const active = commentInput.length > 5;
+
+  const saveCommentInput = event => {
+    setCommentInput(event.target.value);
+  };
+
+  const handleClickBtn = () => {
+    const pushedComments = [...commentList, commentInput]; // [a,b,c]
+    setCommentList(pushedComments);
+    setCommentInput('');
+  };
+
+  console.log(commentList);
+
   return (
     <>
       <nav className="nav">
@@ -10,23 +26,18 @@ const Main = () => {
           <h1 className="title">Westagram</h1>
         </div>
         <label className="search-bar" htmlFor="search">
-          <span className="material-symbols-outlined search-icon">
-            {' '}
-            search{' '}
-          </span>
+          <span className="material-symbols-outlined search-icon">search</span>
           <input className="search-input" placeholder="검색" name="search" />
         </label>
         <div className="nav-right">
           <span className="material-symbols-outlined icon nav-icon">
-            {' '}
-            explore{' '}
+            explore
           </span>
           <span className="material-symbols-outlined icon nav-icon">
             favorite
           </span>
           <span className="material-symbols-outlined icon nav-icon">
-            {' '}
-            person{' '}
+            person
           </span>
         </div>
       </nav>
@@ -53,8 +64,7 @@ const Main = () => {
               <div className="feed-btns gray">
                 <div className="feed-btns-left">
                   <span className="material-symbols-outlined icon">
-                    {' '}
-                    favorite{' '}
+                    favorite
                   </span>
                   <span className="material-symbols-outlined icon">
                     mode_comment
@@ -81,19 +91,30 @@ const Main = () => {
                 위워크에서 진행한 베이킹 클래스
               </div>
               <div className="comments">
-                <div className="comment">
-                  <span className="nickname">neceosecius</span>
-                  거봐 좋았잖아~~~~
-                  <span className="material-symbols-outlined icon gray comment-heart">
-                    favorite
-                  </span>
-                </div>
+                {commentList.map((comment, index) => (
+                  <div key={index} className="comment">
+                    <span className="nickname">neceosecius</span>
+                    {comment}
+                    <span className="material-symbols-outlined icon gray comment-heart">
+                      favorite
+                    </span>
+                  </div>
+                ))}
               </div>
               <div className="bold gray">42분 전</div>
             </div>
             <label className="comment-input-wrapper">
-              <input className="comment-input" placeholder="댓글 달기..." />
-              <button className="comment-btn" disabled>
+              <input
+                className="comment-input"
+                placeholder="댓글 달기..."
+                value={commentInput}
+                onChange={saveCommentInput}
+              />
+              <button
+                className="comment-btn"
+                disabled={!active}
+                onClick={handleClickBtn}
+              >
                 게시
               </button>
             </label>

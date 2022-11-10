@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
-const Login = () => {
+const Login = props => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     loginId: '',
