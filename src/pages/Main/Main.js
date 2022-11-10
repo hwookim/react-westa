@@ -9,7 +9,7 @@ const Main = () => {
           <img className="logo" src="/images/logo.png" alt="logo" />
           <h1 className="title">Westagram</h1>
         </div>
-        <label className="search-bar" for="search">
+        <label className="search-bar" htmlFor="search">
           <span className="material-symbols-outlined search-icon">
             {' '}
             search{' '}
