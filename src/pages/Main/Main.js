@@ -1,25 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Main.scss';
 
 const Main = () => {
-  const [comment, setComment] = useState('');
-  const [comments, setComments] = useState([]);
-
-  const handleChangeComment = e => {
-    setComment(e.target.value);
-  };
-
-  const handleKeydown = e => {
-    if (e.key !== 'Enter') return;
-    addComment();
-  };
-
-  const addComment = () => {
-    if (!comment) return;
-    setComments([...comments, comment]);
-    setComment('');
-  };
-
   return (
     <>
       <nav class="nav">
@@ -83,31 +65,19 @@ const Main = () => {
                 위워크에서 진행한 베이킹 클래스
               </div>
               <div class="comments">
-                {comments.map((comment, index) => (
-                  <div class="comment" key={index}>
-                    <span class="nickname">neceosecius</span>
-                    {comment}
-                    <span class="material-symbols-outlined icon gray comment-heart">
-                      favorite
-                    </span>
-                  </div>
-                ))}
+                <div class="comment">
+                  <span class="nickname">neceosecius</span>
+                  거봐 좋았잖아~~~~
+                  <span class="material-symbols-outlined icon gray comment-heart">
+                    favorite
+                  </span>
+                </div>
               </div>
               <div class="bold gray">42분 전</div>
             </div>
             <label class="comment-input-wrapper">
-              <input
-                class="comment-input"
-                placeholder="댓글 달기..."
-                value={comment}
-                onChange={handleChangeComment}
-                onKeyDown={handleKeydown}
-              />
-              <button
-                class="comment-btn"
-                disabled={!comment}
-                onClick={addComment}
-              >
+              <input class="comment-input" placeholder="댓글 달기..." />
+              <button class="comment-btn" disabled>
                 게시
               </button>
             </label>
